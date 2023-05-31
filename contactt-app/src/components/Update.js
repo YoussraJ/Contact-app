@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useLocation ,useNavigate } from "react-router-dom";
+import "./AddContactt.css";
 const Update=(props)=>{
     const location=useLocation();
     const navigate=useNavigate();
@@ -36,14 +37,14 @@ const Update=(props)=>{
     return(
         <div className="formm">
         <div>
-          <h1>Update Contact </h1>
+          <h1 style={{color:"#fff"}}>Update Contact </h1>
           <form  onSubmit={update}>
            <div className="field">
-              <label>Name:</label>
+              <label>Name</label>
               <input type="text" name="name" placeholder={contact.name} value={contact.name} onChange={fullName}></input>
            </div>
            <div className="field">
-              <label>E-mail:</label>
+              <label>email</label>
               <input type="email" name="email" placeholder={contact.email} value={contact.email} onChange={fullEmail} />
            </div>
            <button className="btn" >Update</button>

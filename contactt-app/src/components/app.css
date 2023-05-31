@@ -1,0 +1,25 @@
+.mainn {
+    min-height: 100vh;
+    background-color: #0B032F !important;
+    
+
+}
+*{
+  font-family: 'Poppins' 'sans serif';
+}
+.cirlce1 {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    top: 50%;
+    right: 56%;
+  }
+
+.cirlce2 {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    top: -5%;
+    right: 15%;
+  }
+

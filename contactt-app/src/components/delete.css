@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ .delete {
+    margin-top: 9vh !important;
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    justify-content: center;
+    align-items: center;
+    background: white I !important;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.06)
+    );
+    text-align:center;
+    border-radius: 1.2vw 2vw;
+    padding: 6.5rem;
+    max-width: 40vw;
+    margin: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px !important;
+    /*background-clip: padding-box;*/
+    backdrop-filter: blur(20px);
+    color: #fff;
+    
+
+ }
+ .btnn {
+    display: flex;
+    gap:50%;
+    justify-content: center;
+    width: 10vw;
+ }
+
+ .btnn button{
+    width: 10vw; 
+    border: none;
+    padding: 7px;
+    font-family: "Poppins" "sans serif";
+    font-weight: bold;
+    border-radius: 7px;
+
+ }
+
+ .delete .NoDelete button{
+    color: #fff;
+    background: linear-gradient(110deg, rgba(187, 20, 226), rgba(21, 32, 227));
+ }
+ .delete .YesDelete button{
+    background-color: #eee;
+    color:#777;
+ }

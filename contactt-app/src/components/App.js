@@ -10,6 +10,9 @@ import DeleteContact from "./DeleteContact.js";
 import Update from "./Update.js";
 import NotFound from "./NotFound.js";
 import api from "../api/contacts.js";
+import "./app.css";
+import blob1 from "./blob1.svg";
+import blob2 from "./blob2.svg";
 function App() {
   // const key ="contacts"; 
   const [contacts,setContact]=useState([]);
@@ -85,7 +88,10 @@ function App() {
  };
  
 return (
-<div>
+<div className="mainn">
+<img src={blob1} alt="blob1" className="cirlce1" />
+<img src={blob2} alt="blob2" className="cirlce2" />
+
   <Router>
    <Header />
    {/*Routes instead of Switch  (t5arjelek ken  lpage li path mte3ha maktoub f lien  ken lget path ma3adch tzid t7awem) version 6*/}

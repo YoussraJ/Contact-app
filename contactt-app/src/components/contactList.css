@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.listt {
+    width: 75vw;
+    margin: 50px auto;
+    position: relative;
+}
+.circle3{
+    
+        height: 15rem;
+        width: 15rem;
+        position: absolute;
+        top: 30vh;
+        right: 3%;    
+}
+.listt .btnAdd{
+position: fixed;
+background: linear-gradient(110deg, rgba(187, 20, 226), rgba(21, 32, 227));
+padding: 15px;
+color: #fff;
+border: none;
+font-weight: bold;
+right: 30px;
+top: 85vh;
+display: block;
+border-radius: 7px;
+}
+.search input {
+    outline: none;
+    background-color: transparent;
+    color:#fff;
+    border: none;
+}
+.search i{
+    color: #fff;
+}
+.search {
+    padding: 7px;
+    width: 30vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+

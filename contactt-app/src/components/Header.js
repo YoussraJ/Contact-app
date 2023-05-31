@@ -1,11 +1,12 @@
-// import react from "react";
+import react from "react";
 const Header = () => 
 {
     return(
         <div>
-            <div>
+            <div style={{display:'flex',justifyContent:'space-between',padding:'10px 15px'}}>
 
-              <h2> Contact App </h2>  
+              <div style={{borderBottom:'none',color:'#fff',fontWeight:'bold',letterSpacing:'1px'}}> MyContacts </div> 
+              <div style={{color:'#fff',fontWeight:'revert-layer'}}>a simple contact app</div> 
 
             </div>
         </div>

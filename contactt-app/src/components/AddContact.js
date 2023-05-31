@@ -2,6 +2,9 @@ import React , {Component} from "react";
 //useNavigate est un des react hooks donc elle n'est peut etre utilsée que dans "functional componenet" Faite bien attention à ne pa le confondre avec Navigate   
 import { useNavigate } from "react-router-dom";
 import "./AddContactt.css";
+import usericon from "./usericon.svg";
+import blob1 from "./blob1.svg";
+import blob2 from "./blob2.svg";
 class AddContact extends Component {
       constructor(props){
         super(props);
@@ -43,22 +46,30 @@ class AddContact extends Component {
    render(){
       
         return(
+        
         <div className="formm">
           <div>
-            <h1>Add Contact </h1>
             <form  onSubmit={this.add}>
+             <div className="iconn">  <img
+                height="150"
+                width="150"
+                className=" profile"
+                src={usericon} 
+              />
+              </div>
              <div className="field">
-                <label>Name:</label>
-                <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.fullName}></input>
+                <label>Name</label>
+                <input type="text" name="name" value={this.state.name} onChange={this.fullName}></input>
              </div>
              <div className="field">
-                <label>E-mail:</label>
-                <input type="email" name="email" placeholder="E-email adress" value={this.state.email} onChange={this.fullEmail} />
+                <label>email</label>
+                <input type="email" name="email"  value={this.state.email} onChange={this.fullEmail} />
              </div>
              <button className="btn" >Add</button>
             </form>
             </div>
         </div>
+       
         );
     }
 }

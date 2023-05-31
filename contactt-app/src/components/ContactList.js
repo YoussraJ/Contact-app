@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import ContactCard from "./ContactCard.js";
-import ContactListt from "./ContactListt.css";
+import  "./contactList.css";
+import blob1 from "./blob1.svg";
 import "../fontawesome-free-6.2.0-web/css/all.css";
 import { Link } from "react-router-dom"; // curly brackets are necessary when the component are not exported by default
 const ContactList=(props)=> {
@@ -12,17 +13,35 @@ const ContactList=(props)=> {
         return <ContactCard contact={contact} />
         
     });
-
+   
+      
+    const buttonRef = useRef(null);
+    let positionInitial;
+  
+    useEffect(() => {
+      positionInitial = buttonRef.current.getBoundingClientRect().top + window.scrollY;
+  
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        buttonRef.current.style.top = positionInitial - scrollTop + 'px';
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+    
     return (
         
-        <div>
-
-            <h2>Contact List</h2>
+        <div className="listt">
+            <img src={blob1} alt="blob1" className="circle3" />
             <Link to="./add">
-            <button>Add Contact</button>
+            <button className="btnAdd" ref={buttonRef}>Add Contact</button>
             </Link>
              
-            <div>
+            <div className="search">
                 <input type="text" placeholder="search" value={props.searchTerm} onChange={search}></input>
                 <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
             </div>
@@ -33,5 +52,6 @@ const ContactList=(props)=> {
            
         </div>
     );
+    
 }
 export default ContactList;
