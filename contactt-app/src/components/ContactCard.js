@@ -11,8 +11,8 @@ const ContactCard=(props)=>{
  
    
    return(
-    <div className="cardd">
-      <img className="iconn" src={contactImag} alt="user"/>
+     <div className="cardd">
+       <div><img className="iconn" src={contactImag} alt="user"/></div>
         <div>
         <Link to={`/contact/${id}`} state={{name:name,email:email}} className="link">
         <span>{name}</span>

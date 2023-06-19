@@ -1,12 +1,14 @@
 .iconCard {
     display: flex;
     align-content: center;
-    /* align-items: center; */
+    width: 20%;
+    justify-content: flex-end;
 }
 .iconCard div {
     padding:3px;
     background-color: rgba(0,0,0,.6);
     margin-right:3px;
+
 }
 .cardd{
         display: flex;
@@ -22,8 +24,17 @@
         margin-top: 15px;
         border-radius: 9px;
 }
+.cardd > div{
+    width: 15%;
+}
 .cardd .link {
     text-decoration: none;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto 2px;
 }
 .cardd span {
     color:#fff;
@@ -33,4 +44,21 @@
 .cardd p {
     color: #fff;
     font-size: 0.8rem;
+}
+
+@media (max-width:700px){
+    .cardd img {
+         width: 10vw;
+          margin: 0;
+    }
+    .cardd {
+        position: relative;
+    }
+    .cardd .link {
+       position: absolute;
+       left:calc(10vw + 7vw);
+       top:50%;
+       transform: translateY(-50%);
+    }
+    
 }

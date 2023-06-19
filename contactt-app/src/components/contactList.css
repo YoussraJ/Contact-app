@@ -28,12 +28,14 @@ right: 30px;
 top: 85vh;
 display: block;
 border-radius: 7px;
+z-index: 2;
 }
 .search input {
     outline: none;
     background-color: transparent;
     color:#fff;
     border: none;
+    width: 80%;
 }
 .search i{
     color: #fff;
@@ -47,8 +49,11 @@ border-radius: 7px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 34px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
 }
 
+@media (max-width=470px){
+
+}
