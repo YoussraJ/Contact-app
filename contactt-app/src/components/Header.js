@@ -2,7 +2,7 @@ import react from "react";
 const Header = () => 
 {
     return(
-        <div>
+        <div style={{backgroundColor:'rgba(0,0,0,.3)',width:'100vw',position:'fixed',top:'0',zIndex:'2'}}>
             <div style={{display:'flex',justifyContent:'space-between',padding:'10px 15px'}}>
 
               <div style={{borderBottom:'none',color:'#fff',fontWeight:'bold',letterSpacing:'1px'}}> MyContacts </div> 

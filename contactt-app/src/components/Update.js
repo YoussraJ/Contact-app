@@ -8,10 +8,10 @@ const Update=(props)=>{
     const [contact,setContact]=useState(location.state.contact);
     
     const fullName=(e)=>{
-       setContact({id:contact.id,name:e.target.value,email:contact.email});
+       setContact({_id:contact._id,name:e.target.value,email:contact.email});
     };
     const fullEmail=(e)=>{
-      setContact({id:contact.id,name:contact.name,email:e.target.value});
+      setContact({_id:contact._id,name:contact.name,email:e.target.value});
     };
   
      const update=(e)=>{

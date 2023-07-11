@@ -51,7 +51,7 @@
 
  .delete .NoDelete button{
     color: #fff;
-    background: linear-gradient(110deg, rgba(187, 20, 226), rgba(21, 32, 227));
+   background: linear-gradient(65.4deg, rgb(56, 248, 249) -9.1%, rgb(213, 141, 240) 40%, rgb(249, 56, 152) 111.1%);
  }
  .delete .YesDelete button{
     background-color: #eee;

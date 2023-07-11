@@ -14,12 +14,19 @@
         height: 15rem;
         width: 15rem;
         position: absolute;
-        top: 30vh;
+        top: 50vh;
         right: 3%;    
 }
 .listt .btnAdd{
 position: fixed;
-background: linear-gradient(110deg, rgba(187, 20, 226), rgba(21, 32, 227));
+background: linear-gradient(65.4deg, rgb(56, 248, 249) -9.1%, rgb(213, 141, 240) 40%, rgb(249, 56, 152) 111.1%);
+    /* background: linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(230, 203, 53) 100%); */
+/* background: linear-gradient(109.6deg, rgb(255, 37, 174) 18.2%, rgb(250, 237, 56) 91.1%); */
+/* background: linear-gradient(109.6deg, rgb(187, 0, 212) 11.2%, rgb(32, 38, 238) 91.1%); */
+/* background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%); */
+/* background: radial-gradient(926px at 2.7% 11%, rgb(17, 29, 94) 0%, rgb(178, 31, 102) 90%); */
+/* background: linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(254, 225, 64) 100%); */
+/* background: linear-gradient(111.4deg, rgb(246, 4, 26) 0.4%, rgb(251, 139, 34) 100.2%); */
 padding: 15px;
 color: #fff;
 border: none;

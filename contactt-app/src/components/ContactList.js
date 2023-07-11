@@ -1,7 +1,7 @@
 import React,{useRef,useEffect} from "react";
 import ContactCard from "./ContactCard.js";
 import  "./contactList.css";
-import blob1 from "./blob1.svg";
+import cercle1 from "./cercle1.svg";
 import "../fontawesome-free-6.2.0-web/css/all.css";
 import { Link } from "react-router-dom"; // curly brackets are necessary when the component are not exported by default
 const ContactList=(props)=> {
@@ -35,8 +35,9 @@ const ContactList=(props)=> {
     
     return (
         
-        <div className="listt">
-            <img src={blob1} alt="blob1" className="circle3" />
+      <div className="listt">
+        
+            {/* <img src={cercle1} alt="cercle1" className="circle3" /> */}
             <Link to="./add">
             <button className="btnAdd" ref={buttonRef}>Add Contact</button>
             </Link>

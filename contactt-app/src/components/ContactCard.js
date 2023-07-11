@@ -1,5 +1,5 @@
 import React from "react";
-import contactImag from "../images/contactImag.png" ;
+import contactImag from "../images/usr.png" ;
 import "../fontawesome-free-6.2.0-web/css/all.css";
 import { Link } from "react-router-dom";
 import { MdDelete, MdEdit } from "react-icons/md";
@@ -7,20 +7,20 @@ import "./contactCard.css";
 
 // import { useLocation } from "react-router-dom";
 const ContactCard=(props)=>{
-   const  {id,name,email}=props.contact;
+   const  {_id,name,email}=props.contact;
  
    
    return(
      <div className="cardd">
        <div><img className="iconn" src={contactImag} alt="user"/></div>
         <div>
-        <Link to={`/contact/${id}`} state={{name:name,email:email}} className="link">
+        <Link to={`/contact/${_id}`} state={{name:name,email:email}} className="link">
         <span>{name}</span>
         <p>{email}</p>
         </Link> 
         </div>
         <div className="iconCard">
-        <Link to={`/update/${id}`} state={{contact:props.contact}}>
+        <Link to={`/update/${_id}`} state={{contact:props.contact}}>
         <div style={{padding:"3px",backgroundColor:"rgba(0,0,0,.6)",marginRight:"3px"}}>
             <MdEdit
               className="icon "
@@ -30,7 +30,7 @@ const ContactCard=(props)=>{
           </div>
         {/* <i className="fa-solid fa-pen-to-square fa-fw fa-2x" ></i> */}
         </Link>
-        <Link to={`/delete/${id}`} state={{id:id,namee:name,email:email}}>
+        <Link to={`/delete/${_id}`} state={{_id:_id,namee:name,email:email}}>
         <div style={{padding:"3px",backgroundColor:"rgba(0,0,0,.6)"}}>
             <MdDelete
               

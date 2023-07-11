@@ -2,9 +2,7 @@ import React , {Component} from "react";
 //useNavigate est un des react hooks donc elle n'est peut etre utilsée que dans "functional componenet" Faite bien attention à ne pa le confondre avec Navigate   
 import { useNavigate } from "react-router-dom";
 import "./AddContactt.css";
-import usericon from "./usericon.svg";
-import blob1 from "./blob1.svg";
-import blob2 from "./blob2.svg";
+import usericon from "../images/usr.png";
 class AddContact extends Component {
       constructor(props){
         super(props);

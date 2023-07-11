@@ -11,8 +11,8 @@ import Update from "./Update.js";
 import NotFound from "./NotFound.js";
 import api from "../api/contacts.js";
 import "./app.css";
-import blob1 from "./blob1.svg";
-import blob2 from "./blob2.svg";
+import cercle1 from "./cercle1.svg";
+import cercle2 from "./cercle2.svg";
 function App() {
   // const key ="contacts"; 
   const [contacts,setContact]=useState([]);
@@ -34,27 +34,26 @@ function App() {
 
   
   const retrieveContacts=async ()=>{
-   const response= await api.get("/contacts");
+   const response= await api.get("contacts");
    return response.data;
   };
   const addContactHandler = async (contact) => {
     // contact.id=uuidv4();
     //   setContact([...contacts, contact ]);
     const request={
-      id:uuidv4(),
+      _id:uuidv4(),
       ...contact
     };
-    const response=await api.post("/contacts",request);
+    const response=await api.post("contacts",request);
     setContact([...contacts,response.data]);
-
     
   };
 
   const update=async(contact)=>{
     
-    const response=await api.put(`/contacts/${contact.id}`,contact);
+    const response=await api.patch(`contacts/${contact._id}`,contact);
     setContact(contacts.map((contact) =>{
-    return contact.id===response.data.id?{...response.data} : contact
+    return contact._id===response.data._id?{...response.data} : contact
     }
     ));
   };
@@ -80,18 +79,62 @@ function App() {
   
  
  const removeFunction= async (id)=>{
-    await api.delete(`/contacts/${id}`);
+    await api.delete(`contacts/${id}`);
     const newContacts=contacts.filter((contact)=>{
-      return contact.id !== id;
+      return contact._id !== id;
     });
     setContact(newContacts);
  };
  
 return (
 <div className="mainn">
-<img src={blob1} alt="blob1" className="cirlce1" />
-<img src={blob2} alt="blob2" className="cirlce2" />
+{/* <img src={cercle1} alt="cercle1" className="cirlce1" /> */}
+{/* <img src={cercle2} alt="cercle2" className="cirlce2" /> */}
+<div className='bubbles'>
+        <span style={{'--i': 11}} />
+        <span style={{'--i': 12}} />
+        <span style={{'--i': 24}} />
+        <span style={{'--i': 10}} />
+        <span style={{'--i': 14}} />
+<span style={{'--i': 23}} />
+<span style={{'--i': 18}} />
+<span style={{'--i': 16}} />
+<span style={{'--i': 19}} />
+<span style={{'--i': 20}} />
+<span style={{'--i': 22}} />
+<span style={{'--i': 25}} />
+<span style={{'--i': 18}} />
+<span style={{'--i': 21}} />
+<span style={{'--i': 15}} />
+<span style={{'--i': 13}} />
+<span style={{'--i': 26}} />
+<span style={{'--i': 17}} />
+<span style={{'--i': 13}} />
+<span style={{'--i': 28}} />
 
+
+
+<span style={{'--i': 11}} />
+        <span style={{'--i': 12}} />
+        <span style={{'--i': 24}} />
+        <span style={{'--i': 10}} />
+        <span style={{'--i': 14}} />
+<span style={{'--i': 23}} />
+<span style={{'--i': 18}} />
+<span style={{'--i': 16}} />
+<span style={{'--i': 19}} />
+<span style={{'--i': 20}} />
+<span style={{'--i': 22}} />
+<span style={{'--i': 25}} />
+<span style={{'--i': 18}} />
+<span style={{'--i': 21}} />
+<span style={{'--i': 15}} />
+<span style={{'--i': 13}} />
+<span style={{'--i': 26}} />
+<span style={{'--i': 17}} />
+<span style={{'--i': 13}} />
+<span style={{'--i': 28}} />
+</div>
   <Router>
    <Header />
    {/*Routes instead of Switch  (t5arjelek ken  lpage li path mte3ha maktoub f lien  ken lget path ma3adch tzid t7awem) version 6*/}

@@ -1,5 +1,5 @@
 import React from "react";
-import con from "../images/contactImag.png" ;
+import con from "../images/usr.png" ;
 import "../fontawesome-free-6.2.0-web/css/all.css";
 import "./delete.css";
 import { Link, useLocation ,useNavigate} from "react-router-dom";
@@ -13,7 +13,7 @@ const DeleteContact=(props)=>{
     const name=location.state.namee;
     console.log(name);
     const email=location.state.email;
-    const id=location.state.id;
+    const id=location.state._id;
     return(
         <div className="delete"> 
             <div className="info">
